@@ -1,0 +1,61 @@
+{
+  "project": {},
+  "projectName": "wefram",
+  "appTitle": "Wefram Framework",
+  "auth": {
+    "salt": "--qwertyuiopasdfghjklzxcvbnm",
+    "secret": "--QWERTYUIOPasdfghjklZXCVBNM",
+    "audience": "localhost",
+    "jwtExpireMins": 0,
+    "sessionTimeoutMins": 720,
+    "rememberUsername": true,
+    "failedAuthDelay": 2,
+    "succeed_auth_delay": 2,
+    "backends": [
+      "local",
+      "ad"
+    ]
+  },
+  "url": {
+    "default": "/workspace",
+    "defaultAuthenticated": "/workspace",
+    "defaultGuest": "/workspace",
+    "onLogoff": "/workspace/login",
+    "loginScreen": "/workspace/login"
+  },
+  "db": {
+    "user": "weframdba",
+    "pass": "wefram",
+    "name": "wefram",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "migrate.dropMissingTables": true,
+    "migrate.dropMissingColumns": true
+  },
+  "redis": {
+    "uri": "redis://localhost/0",
+    "password": null
+  },
+  "storage": {
+    "root": ".storage",
+    "filesDir": "files"
+  },
+  "uvicorn": {
+    "loop": "uvloop",
+    "bind": "0.0.0.0",
+    "port": 8000
+  },
+  "settings": {
+    "alwaysLoaded": []
+  },
+  "locale": {
+    "default": "en_US"
+  },
+  "desktop": {
+    "requires": null,
+    "introText": null
+  },
+  "echo_ds": false,
+  "devel": true,
+  "verbose": false
+}
